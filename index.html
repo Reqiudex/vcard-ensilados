@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/x-icon" href="ensilados.svg">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vcard Ensilados Santa Cruz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .gallery-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+        .gallery-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .gallery-button.prev {
+            left: 10px;
+        }
+        .gallery-button.next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-background">
+        <div class="video-wrapper">
+            <iframe id="video" src="https://www.youtube.com/embed/Bj3R61S_iZs?autoplay=1&mute=1&loop=1&playlist=Bj3R61S_iZs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <section class="slide" id="slide1">
+        <div class="content">
+            <div class="svg-container">
+                <img src="RECT.png" alt="VCard de Cherry Tech" class="vcard-png">
+            </div>       
+            <h1>Bienvenido</h1>
+            <p>A la tarjeta de Vcard web de Ensilados Santa Cruz.</p>
+            <div class="container">
+                <a href="JoséZabala Mercado.vcf" download class="download-button">Registrar Número</a>
+            </div>
+            <div class="social-icons">
+                <a href="#slide4" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        <a href="#slide2" class="arrow-button">⬇</a>
+    </section>
+    
+    <section class="slide" id="slide2">
+        <div class="content">
+            <h1>Sobre Nosotros</h1>
+            <p>Productores y Asesores en alimentación Sostenible para Ganados Bovinos, Camelidos y Equinos.</p>
+            <div class="gallery">
+                <button class="gallery-button prev" id="prev-button">&#10094;</button>
+                <div class="gallery-images" id="gallery-images">
+                    <img src="1.jpeg" alt="Imagen 1">
+                    <img src="2.jpeg" alt="Imagen 2">
+                    <img src="3.jpeg" alt="Imagen 3">
+                    <img src="4.jpeg" alt="Imagen 4">
+                    <img src="5.jpeg" alt="Imagen 5">
+                    <img src="6.jpeg" alt="Imagen 6">
+                    <img src="7.jpeg" alt="Imagen 7">
+                </div>
+                <button class="gallery-button next" id="next-button">&#10095;</button>
+            </div>
+            <a href="#slide3" class="arrow-button">⬇</a>
+        </div>
+    </section>
+
+    <section class="slide" id="slide3">
+        <div class="content">
+            <h1>Nuestros Servicios</h1>
+            <p>Descubre lo que podemos ofrecerte.</p>
+            <div class="pdf-buttons">
+                <a href="TABLA BROMATOLOGICA - ENSILADOS SANTA CRUZ 2024-INV.pdf" download class="pdf-button">Acerca de nuestros Silos Maiz</a>
+                <a href="SILOS-MAIZ - Ensilados Santa Cruz SRL.pdf" download class="pdf-button">Descargar Tabla Bromatologica</a>
+                <a href="#slide4" class="arrow-button">⬇</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide" id="slide4">
+        <div class="content">
+            <h1>Con quien te gustaria contactarte?</h1>
+            <p>Ponte en contacto con nosotros para más información.</p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/59170294347" target="_blank" class="whatsapp-button">Ing. José Gabriel Zabala Mercado</a>
+                <a href="https://wa.me/59162223121" target="_blank" class="whatsapp-button">David Zabala Mercado</a>
+                <a href="https://wa.me/59177633201" target="_blank" class="whatsapp-button">Herlan Zabala Arteaga</a>
+                <a href="https://wa.me/59179873064" target="_blank" class="whatsapp-button">Herman Hurtado Zabala</a>
+                <a href="https://wa.me/59169011975" target="_blank" class="whatsapp-button">Ing. Erick Kay Añez</a>
+            </div>
+            <div class="social-buttons">
+                <a href="https://www.instagram.com/ensilados.scz?igsh=dmxrbG82bDBobGZi" target="_blank" class="social-button instagram-button"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100094355722930&mibextid=ZbWKwL" target="_blank" class="social-button facebook-button"><i class="fab fa-facebook"></i></a>
+            </div>
+            <a href="#slide1" class="arrow-button">⬆</a>
+        </div>
+    </section>
+    
+    <script>
+        document.querySelectorAll('.arrow-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.gallery-images img');
+        const totalSlides = slides.length;
+
+        document.getElementById('next-button').addEventListener('click', function() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateGallery();
+        });
+
+        document.getElementById('prev-button').addEventListener('click', function() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateGallery();
+        });
+
+        function updateGallery() {
+            const offset = -currentSlide * 100;
+            document.getElementById('gallery-images').style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>
