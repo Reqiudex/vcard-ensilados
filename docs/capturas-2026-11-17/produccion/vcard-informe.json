@@ -1,0 +1,49 @@
+{
+  "url": "https://mucarzelvcard.cerice360.com/",
+  "anchos": {
+    "360": {
+      "tCargaMs": 1186,
+      "anchoDoc": 360,
+      "desbordeHorizontal": false,
+      "consola": [],
+      "fallidas": [],
+      "axe": [],
+      "tactilesPequenos": []
+    },
+    "768": {
+      "tCargaMs": 1106,
+      "anchoDoc": 768,
+      "desbordeHorizontal": false,
+      "consola": [],
+      "fallidas": [
+        "FALLO https://mucarzelvcard.cerice360.com/img/foto-5-640.webp net::ERR_ABORTED",
+        "FALLO https://mucarzelvcard.cerice360.com/img/foto-6-640.webp net::ERR_ABORTED",
+        "FALLO https://mucarzelvcard.cerice360.com/img/foto-7-640.webp net::ERR_ABORTED"
+      ],
+      "axe": null,
+      "tactilesPequenos": []
+    },
+    "1366": {
+      "tCargaMs": 1034,
+      "anchoDoc": 1366,
+      "desbordeHorizontal": false,
+      "consola": [],
+      "fallidas": [],
+      "axe": [],
+      "tactilesPequenos": []
+    },
+    "1920": {
+      "tCargaMs": 1337,
+      "anchoDoc": 1920,
+      "desbordeHorizontal": false,
+      "consola": [],
+      "fallidas": [
+        "FALLO https://mucarzelvcard.cerice360.com/img/foto-5-640.webp net::ERR_ABORTED",
+        "FALLO https://mucarzelvcard.cerice360.com/img/foto-6-640.webp net::ERR_ABORTED",
+        "FALLO https://mucarzelvcard.cerice360.com/img/foto-7-640.webp net::ERR_ABORTED"
+      ],
+      "axe": null,
+      "tactilesPequenos": []
+    }
+  }
+}
