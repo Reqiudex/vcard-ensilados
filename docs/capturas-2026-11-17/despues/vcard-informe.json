@@ -1,0 +1,41 @@
+{
+  "url": "http://127.0.0.1:18182/",
+  "anchos": {
+    "360": {
+      "tCargaMs": 678,
+      "anchoDoc": 360,
+      "desbordeHorizontal": false,
+      "consola": [],
+      "fallidas": [],
+      "axe": [],
+      "tactilesPequenos": []
+    },
+    "768": {
+      "tCargaMs": 654,
+      "anchoDoc": 768,
+      "desbordeHorizontal": false,
+      "consola": [],
+      "fallidas": [],
+      "axe": null,
+      "tactilesPequenos": []
+    },
+    "1366": {
+      "tCargaMs": 686,
+      "anchoDoc": 1366,
+      "desbordeHorizontal": false,
+      "consola": [],
+      "fallidas": [],
+      "axe": [],
+      "tactilesPequenos": []
+    },
+    "1920": {
+      "tCargaMs": 804,
+      "anchoDoc": 1920,
+      "desbordeHorizontal": false,
+      "consola": [],
+      "fallidas": [],
+      "axe": null,
+      "tactilesPequenos": []
+    }
+  }
+}

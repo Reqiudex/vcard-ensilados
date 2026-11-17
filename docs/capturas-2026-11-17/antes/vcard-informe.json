@@ -1,0 +1,167 @@
+{
+  "url": "https://mucarzelvcard.cerice360.com/",
+  "anchos": {
+    "360": {
+      "tCargaMs": 12935,
+      "anchoDoc": 360,
+      "desbordeHorizontal": false,
+      "consola": [
+        "warning: [GroupMarkerNotSet(crbug.com/242999)!:A060280014170000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.",
+        "warning: Failed to create WebGPU Context Provider",
+        "warning: Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://mucarzelvcard.cerice360.com') does not match the recipient window's origin ('https://www.youtube.com')."
+      ],
+      "fallidas": [
+        "FALLO https://www.youtube.com/api/stats/qoe?fmt=247&cpn=7jLazZ3a6CoAbZzf&el=embedded&ns=yt&fexp=v1%2C100673025%2C1884%2C364%2C-76827049%2C156420%2C27058999%2C34656%2C124674%2C117689%2C9252%2C16509%2C23206%2 net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/ptracking?html5=1&video_id=Bj3R61S_iZs&cpn=7jLazZ3a6CoAbZzf&ei=eSv8aoiiM6WdobIP_5O82Q4&ptk=youtube_none&pltype=contentugc net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=7jLazZ3a6CoAbZzf&ver=2&cmt=0.04&fmt=247&fs=0&rt=1.982&euri=https%3A%2F%2Fmucarzelvcard.cerice360.com%2F&lact=2039&cl=1019368686&mos=1&v net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/embed/establish_zw net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/api/stats/qoe?fmt=248&afmt=251&cpn=7jLazZ3a6CoAbZzf&el=embedded&ns=yt&fexp=v1%2C100673025%2C1884%2C364%2C-76827049%2C156420%2C27058999%2C34656%2C124674%2C117689%2C9252%2C16509% net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/api/stats/qoe?fmt=248&afmt=251&cpn=7jLazZ3a6CoAbZzf&el=embedded&ns=yt&fexp=v1%2C100673025%2C1884%2C364%2C-76827049%2C156420%2C27058999%2C34656%2C124674%2C117689%2C9252%2C16509% net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=7jLazZ3a6CoAbZzf&ver=2&cmt=9.61&fmt=248&fs=0&rt=12.002&euri=https%3A%2F%2Fmucarzelvcard.cerice360.com%2F&lact=12059&cl=1019368686&stat net::ERR_ABORTED"
+      ],
+      "axe": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "n": 8,
+          "ej": [
+            ".download-button ::   Element has insufficient color contrast of 2.66 (foreground color: #ffffff, background color: #00b818, font size: 18.8pt (25px), font weight: bold). Expected ",
+            ".pdf-button[download=\"\"]:nth-child(1) ::   Element has insufficient color contrast of 2.66 (foreground color: #ffffff, background color: #00b818, font size: 12.0pt (16px), font weight: bold). Expected ",
+            ".pdf-button[download=\"\"]:nth-child(2) ::   Element has insufficient color contrast of 2.66 (foreground color: #ffffff, background color: #00b818, font size: 12.0pt (16px), font weight: bold). Expected "
+          ]
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "help": "Frames must have an accessible name",
+          "n": 1,
+          "ej": [
+            "#video ::   Element has no title attribute"
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "help": "Links must have discernible text",
+          "n": 3,
+          "ej": [
+            ".social-icon ::   Element is in tab order and does not have accessible text",
+            ".instagram-button ::   Element is in tab order and does not have accessible text",
+            ".facebook-button ::   Element is in tab order and does not have accessible text"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "n": 7,
+          "ej": [
+            "#slide1 ::   Some page content is not contained by landmarks",
+            "#slide2 > .content > h1 ::   Some page content is not contained by landmarks",
+            "#slide2 > .content > p ::   Some page content is not contained by landmarks"
+          ]
+        }
+      ],
+      "tactilesPequenos": []
+    },
+    "768": {
+      "tCargaMs": 3704,
+      "anchoDoc": 768,
+      "desbordeHorizontal": false,
+      "consola": [
+        "warning: [GroupMarkerNotSet(crbug.com/242999)!:A060280014170000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.",
+        "warning: Failed to create WebGPU Context Provider"
+      ],
+      "fallidas": [
+        "FALLO https://www.youtube.com/api/stats/qoe?fmt=247&afmt=251&cpn=8sIgTJg6rB9VIvV5&el=embedded&ns=yt&fexp=v1%2C100673025%2C1884%2C364%2C-76670629%2C27058999%2C34656%2C124674%2C117689%2C9252%2C16509%2C23206%2 net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=8sIgTJg6rB9VIvV5&ver=2&cmt=0.028&fmt=247&fs=0&rt=1.06&euri=https%3A%2F%2Fmucarzelvcard.cerice360.com%2F&lact=1103&cl=1019368686&mos=1&v net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/ptracking?html5=1&video_id=Bj3R61S_iZs&cpn=8sIgTJg6rB9VIvV5&ei=iyv8atGuHd3y1sQPq7qBgAE&ptk=youtube_none&pltype=contentugc net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/embed/establish_zw net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=8sIgTJg6rB9VIvV5&ver=2&cmt=4.727&fmt=247&fs=0&rt=6.01&euri=https%3A%2F%2Fmucarzelvcard.cerice360.com%2F&lact=6054&cl=1019368686&state= net::ERR_ABORTED"
+      ],
+      "axe": null,
+      "tactilesPequenos": []
+    },
+    "1366": {
+      "tCargaMs": 5491,
+      "anchoDoc": 1366,
+      "desbordeHorizontal": false,
+      "consola": [
+        "warning: [GroupMarkerNotSet(crbug.com/242999)!:A060280014170000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.",
+        "warning: Failed to create WebGPU Context Provider",
+        "warning: Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://mucarzelvcard.cerice360.com') does not match the recipient window's origin ('https://www.youtube.com')."
+      ],
+      "fallidas": [
+        "FALLO https://www.youtube.com/api/stats/qoe?fmt=247&afmt=251&cpn=VyS5gc_XOHXg3zNl&el=embedded&ns=yt&fexp=v1%2C100673025%2C1884%2C224%2C140%2C-76670629%2C27058999%2C34656%2C124674%2C117689%2C9252%2C16509%2C6 net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=VyS5gc_XOHXg3zNl&ver=2&cmt=0.024&fmt=247&fs=0&rt=1.423&euri=https%3A%2F%2Fmucarzelvcard.cerice360.com%2F&lact=1498&cl=1019368686&mos=1& net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/ptracking?html5=1&video_id=Bj3R61S_iZs&cpn=VyS5gc_XOHXg3zNl&ei=lCv8ap6LJIiPobIPr8j6kAQ&ptk=youtube_none&pltype=contentugc net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/api/stats/qoe?fmt=248&afmt=251&cpn=VyS5gc_XOHXg3zNl&el=embedded&ns=yt&fexp=v1%2C100673025%2C1884%2C224%2C140%2C-76670629%2C27058999%2C34656%2C124674%2C117689%2C9252%2C16509%2C6 net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=VyS5gc_XOHXg3zNl&ver=2&cmt=1.354&fmt=248&fs=0&rt=3.002&euri=https%3A%2F%2Fmucarzelvcard.cerice360.com%2F&lact=3077&cl=1019368686&state net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/api/stats/qoe?fmt=248&afmt=251&cpn=VyS5gc_XOHXg3zNl&el=embedded&ns=yt&fexp=v1%2C100673025%2C1884%2C224%2C140%2C-76670629%2C27058999%2C34656%2C124674%2C117689%2C9252%2C16509%2C6 net::ERR_ABORTED"
+      ],
+      "axe": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "n": 8,
+          "ej": [
+            ".download-button ::   Element has insufficient color contrast of 2.66 (foreground color: #ffffff, background color: #00b818, font size: 18.8pt (25px), font weight: bold). Expected ",
+            ".pdf-button[download=\"\"]:nth-child(1) ::   Element has insufficient color contrast of 2.66 (foreground color: #ffffff, background color: #00b818, font size: 12.0pt (16px), font weight: bold). Expected ",
+            ".pdf-button[download=\"\"]:nth-child(2) ::   Element has insufficient color contrast of 2.66 (foreground color: #ffffff, background color: #00b818, font size: 12.0pt (16px), font weight: bold). Expected "
+          ]
+        },
+        {
+          "id": "frame-title",
+          "impact": "serious",
+          "help": "Frames must have an accessible name",
+          "n": 1,
+          "ej": [
+            "#video ::   Element has no title attribute"
+          ]
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "help": "Links must have discernible text",
+          "n": 3,
+          "ej": [
+            ".social-icon ::   Element is in tab order and does not have accessible text",
+            ".instagram-button ::   Element is in tab order and does not have accessible text",
+            ".facebook-button ::   Element is in tab order and does not have accessible text"
+          ]
+        },
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "n": 7,
+          "ej": [
+            "#slide1 ::   Some page content is not contained by landmarks",
+            "#slide2 > .content > h1 ::   Some page content is not contained by landmarks",
+            "#slide2 > .content > p ::   Some page content is not contained by landmarks"
+          ]
+        }
+      ],
+      "tactilesPequenos": []
+    },
+    "1920": {
+      "tCargaMs": 4108,
+      "anchoDoc": 1920,
+      "desbordeHorizontal": false,
+      "consola": [
+        "warning: [GroupMarkerNotSet(crbug.com/242999)!:A090280014170000]Automatic fallback to software WebGL has been deprecated. Please use the --enable-unsafe-swiftshader flag to opt in to lower security guarantees for trusted content.",
+        "warning: Failed to create WebGPU Context Provider"
+      ],
+      "fallidas": [
+        "FALLO https://www.youtube.com/api/stats/qoe?fmt=248&afmt=251&cpn=qBkkEFFkQhUyBSne&el=embedded&ns=yt&fexp=v1%2C100673025%2C1884%2C225%2C139%2C-76670629%2C27058999%2C34656%2C124674%2C117689%2C9252%2C16509%2C2 net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/api/stats/playback?ns=yt&el=embedded&cpn=qBkkEFFkQhUyBSne&ver=2&cmt=0.028&fmt=248&fs=0&rt=1.426&euri=https%3A%2F%2Fmucarzelvcard.cerice360.com%2F&lact=1498&cl=1019368686&mos=1& net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/ptracking?html5=1&video_id=Bj3R61S_iZs&cpn=qBkkEFFkQhUyBSne&ei=oCv8at7EJbP31sQP9pvm6Ac&ptk=youtube_none&pltype=contentugc net::ERR_ABORTED",
+        "FALLO https://www.youtube.com/api/stats/watchtime?ns=yt&el=embedded&cpn=qBkkEFFkQhUyBSne&ver=2&cmt=5.959&fmt=248&fs=0&rt=8.008&euri=https%3A%2F%2Fmucarzelvcard.cerice360.com%2F&lact=972&cl=1019368686&state= net::ERR_ABORTED"
+      ],
+      "axe": null,
+      "tactilesPequenos": []
+    }
+  }
+}
