@@ -1,154 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="icon" type="image/x-icon" href="ensilados.svg">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vcard Ensilados Santa Cruz</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Ensilados Santa Cruz | Tarjeta digital de contacto</title>
+    <meta name="description" content="Tarjeta digital de Ensilados Santa Cruz: guarda nuestro contacto, escríbenos por WhatsApp y descarga la ficha técnica del silo de maíz BM709.">
+    <meta name="theme-color" content="#0f170b">
+    <link rel="icon" href="EnsiladosSantaCruzVcardCherryTechBlancoFondoNegro.svg" type="image/svg+xml">
+    <meta property="og:title" content="Ensilados Santa Cruz | Tarjeta digital">
+    <meta property="og:description" content="Productores y asesores en alimentación sostenible para ganado bovino, camélido y equino.">
+    <meta property="og:image" content="https://mucarzelvcard.cerice360.com/img/foto-6-1280.webp">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .gallery {
-            display: flex;
-            overflow: hidden;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        .gallery-images {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        .gallery img {
-            width: 100%;
-            max-width: 100%;
-            height: auto;
-        }
-        .gallery-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.7);
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            border-radius: 50%;
-        }
-        .gallery-button.prev {
-            left: 10px;
-        }
-        .gallery-button.next {
-            right: 10px;
-        }
-    </style>
+    <script src="js/vcard.js" defer></script>
 </head>
 <body>
-    <div id="video-background">
-        <div class="video-wrapper">
-            <iframe id="video" src="https://www.youtube.com/embed/Bj3R61S_iZs?autoplay=1&mute=1&loop=1&playlist=Bj3R61S_iZs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+    <a class="saltar" href="#contactos">Ir directo a los contactos</a>
+
+    <div id="video-background" aria-hidden="true">
+        <div class="video-wrapper" id="video-wrapper"></div>
     </div>
 
-    <section class="slide" id="slide1">
-        <div class="content">
-            <div class="svg-container">
-                <img src="RECT.png" alt="VCard de Cherry Tech" class="vcard-png">
-            </div>       
-            <h1>Bienvenido</h1>
-            <p>A la tarjeta de Vcard web de Ensilados Santa Cruz.</p>
-            <div class="container">
-                <a href="JoséZabala Mercado.vcf" download class="download-button">Registrar Número</a>
-            </div>
-            <div class="social-icons">
-                <a href="#slide4" class="social-icon">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-            </div>
-        </div>
-        <a href="#slide2" class="arrow-button">⬇</a>
-    </section>
-    
-    <section class="slide" id="slide2">
-        <div class="content">
-            <h1>Sobre Nosotros</h1>
-            <p>Productores y Asesores en alimentación Sostenible para Ganados Bovinos, Camelidos y Equinos.</p>
-            <div class="gallery">
-                <button class="gallery-button prev" id="prev-button">&#10094;</button>
-                <div class="gallery-images" id="gallery-images">
-                    <img src="1.jpeg" alt="Imagen 1">
-                    <img src="2.jpeg" alt="Imagen 2">
-                    <img src="3.jpeg" alt="Imagen 3">
-                    <img src="4.jpeg" alt="Imagen 4">
-                    <img src="5.jpeg" alt="Imagen 5">
-                    <img src="6.jpeg" alt="Imagen 6">
-                    <img src="7.jpeg" alt="Imagen 7">
+    <main>
+        <section class="slide" id="slide1" aria-labelledby="t-inicio">
+            <div class="content">
+                <div class="svg-container">
+                    <img src="img/logo-512.webp" alt="Logotipo de Ensilados Santa Cruz" class="vcard-png" width="200" height="200">
                 </div>
-                <button class="gallery-button next" id="next-button">&#10095;</button>
+                <h1 id="t-inicio">Ensilados Santa Cruz</h1>
+                <p>Productores y asesores en alimentación sostenible para ganado bovino, camélido y equino.</p>
+                <div class="container">
+                    <a href="JoséZabala Mercado.vcf" download="Ensilados Santa Cruz.vcf" class="download-button">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" width="26" height="26"><use href="#i-agenda"/></svg>
+                        Guardar contacto
+                    </a>
+                </div>
+                <div class="acciones-rapidas">
+                    <a href="https://wa.me/59170294347" class="accion-rapida" target="_blank" rel="noopener">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-whatsapp"/></svg>
+                        WhatsApp
+                    </a>
+                    <a href="https://ensilados.cerice360.com/" class="accion-rapida">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><use href="#i-web"/></svg>
+                        Sitio web
+                    </a>
+                </div>
             </div>
-            <a href="#slide3" class="arrow-button">⬇</a>
-        </div>
-    </section>
+            <a href="#slide2" class="arrow-button" aria-label="Ir a Sobre nosotros">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="32" height="32"><use href="#i-abajo"/></svg>
+            </a>
+        </section>
 
-    <section class="slide" id="slide3">
-        <div class="content">
-            <h1>Nuestros Servicios</h1>
-            <p>Descubre lo que podemos ofrecerte.</p>
-            <div class="pdf-buttons">
-                <a href="TABLA BROMATOLOGICA - ENSILADOS SANTA CRUZ 2024-INV.pdf" download class="pdf-button">Acerca de nuestros Silos Maiz</a>
-                <a href="SILOS-MAIZ - Ensilados Santa Cruz SRL.pdf" download class="pdf-button">Descargar Tabla Bromatologica</a>
-                <a href="#slide4" class="arrow-button">⬇</a>
+        <section class="slide" id="slide2" aria-labelledby="t-nosotros">
+            <div class="content">
+                <h2 id="t-nosotros">Sobre nosotros</h2>
+                <p>Producimos maíz y sorgo para ensilar y asesoramos a ganaderos en la alimentación de sus animales.</p>
+                <div class="gallery" role="group" aria-roledescription="carrusel" aria-label="Fotos de Ensilados Santa Cruz">
+                    <div class="gallery-images" id="gallery-images">
+                        <img src="img/foto-1-640.webp" srcset="img/foto-1-640.webp 640w, img/foto-1-1280.webp 1280w" sizes="(min-width: 800px) 800px, 100vw" width="1280" height="853" alt="Panoja de sorgo madura en un campo de cultivo.">
+                        <img src="img/foto-2-640.webp" srcset="img/foto-2-640.webp 640w, img/foto-2-1280.webp 1280w" sizes="(min-width: 800px) 800px, 100vw" width="1280" height="853" loading="lazy" alt="Campo de sorgo en floración bajo una línea eléctrica.">
+                        <img src="img/foto-3-640.webp" srcset="img/foto-3-640.webp 640w, img/foto-3-1280.webp 1280w" sizes="(min-width: 800px) 800px, 100vw" width="1280" height="853" loading="lazy" alt="Cultivo para silo con camiones de cosecha al fondo.">
+                        <img src="img/foto-4-640.webp" srcset="img/foto-4-640.webp 640w, img/foto-4-1280.webp 1280w" sizes="(min-width: 800px) 800px, 100vw" width="1280" height="853" loading="lazy" alt="Grupo de productores escuchando una explicación dentro de un cultivo de sorgo.">
+                        <img src="img/foto-5-640.webp" srcset="img/foto-5-640.webp 640w, img/foto-5-1280.webp 1280w" sizes="(min-width: 800px) 800px, 100vw" width="1280" height="853" loading="lazy" alt="Extensión de sorgo maduro con árboles al fondo.">
+                        <img src="img/foto-6-640.webp" srcset="img/foto-6-640.webp 640w, img/foto-6-1280.webp 1280w" sizes="(min-width: 800px) 800px, 100vw" width="1280" height="853" loading="lazy" alt="Mano sosteniendo ensilado recién picado, con grano y hoja verde.">
+                        <img src="img/foto-7-640.webp" srcset="img/foto-7-640.webp 640w, img/foto-7-1280.webp 1280w" sizes="(min-width: 800px) 800px, 100vw" width="1280" height="853" loading="lazy" alt="Camión descargando forraje picado sobre la pila de ensilado.">
+                    </div>
+                    <button type="button" class="gallery-button prev" id="prev-button" aria-label="Foto anterior">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button type="button" class="gallery-button next" id="next-button" aria-label="Foto siguiente">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </div>
+                <p class="gallery-contador" id="gallery-contador" aria-live="polite">Foto 1 de 7</p>
             </div>
-        </div>
-    </section>
+            <a href="#slide3" class="arrow-button" aria-label="Ir a Ficha técnica">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="32" height="32"><use href="#i-abajo"/></svg>
+            </a>
+        </section>
 
-    <section class="slide" id="slide4">
-        <div class="content">
-            <h1>Con quien te gustaria contactarte?</h1>
-            <p>Ponte en contacto con nosotros para más información.</p>
-            <div class="contact-buttons">
-                <a href="https://wa.me/59170294347" target="_blank" class="whatsapp-button">Ing. José Gabriel Zabala Mercado</a>
-                <a href="https://wa.me/59162223121" target="_blank" class="whatsapp-button">David Zabala Mercado</a>
-                <a href="https://wa.me/59177633201" target="_blank" class="whatsapp-button">Herlan Zabala Arteaga</a>
-                <a href="https://wa.me/59179873064" target="_blank" class="whatsapp-button">Herman Hurtado Zabala</a>
-                <a href="https://wa.me/59169011975" target="_blank" class="whatsapp-button">Ing. Erick Kay Añez</a>
+        <section class="slide" id="slide3" aria-labelledby="t-ficha">
+            <div class="content">
+                <h2 id="t-ficha">Ficha técnica</h2>
+                <p>Silo de maíz BM709: materia seca 35,16 %, proteína bruta 6,34 %. Excelente para engorde, adecuado para lechería.</p>
+                <div class="pdf-buttons">
+                    <a href="TABLA BROMATOLOGICA - ENSILADOS SANTA CRUZ 2024-INV.pdf" download="Tabla bromatologica silo maiz BM709.pdf" class="pdf-button">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-descarga"/></svg>
+                        <span>Tabla bromatológica <span class="peso">(PDF, 620 KB)</span></span>
+                    </a>
+                    <a href="SILOS-MAIZ - Ensilados Santa Cruz SRL.pdf" download="Ficha silo maiz BM709.pdf" class="pdf-button">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><use href="#i-descarga"/></svg>
+                        <span>Ficha del silo de maíz <span class="peso">(PDF, 1 MB)</span></span>
+                    </a>
+                </div>
             </div>
-            <div class="social-buttons">
-                <a href="https://www.instagram.com/ensilados.scz?igsh=dmxrbG82bDBobGZi" target="_blank" class="social-button instagram-button"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100094355722930&mibextid=ZbWKwL" target="_blank" class="social-button facebook-button"><i class="fab fa-facebook"></i></a>
+            <a href="#slide4" class="arrow-button" aria-label="Ir a Contactos">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="32" height="32"><use href="#i-abajo"/></svg>
+            </a>
+        </section>
+
+        <section class="slide" id="slide4" aria-labelledby="t-contactos">
+            <div class="content" id="contactos">
+                <h2 id="t-contactos">¿Con quién te gustaría hablar?</h2>
+                <p>Escríbenos por WhatsApp para cotizar o pedir asesoría.</p>
+                <ul class="contact-buttons">
+                    <li><a href="https://wa.me/59170294347" target="_blank" rel="noopener" class="whatsapp-button"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-whatsapp"/></svg><span>Ing. José Gabriel Zabala Mercado<small>Gerente general</small></span></a></li>
+                    <li><a href="https://wa.me/59162223121" target="_blank" rel="noopener" class="whatsapp-button"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-whatsapp"/></svg><span>David Zabala Mercado</span></a></li>
+                    <li><a href="https://wa.me/59177633201" target="_blank" rel="noopener" class="whatsapp-button"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-whatsapp"/></svg><span>Herlan Zabala Arteaga</span></a></li>
+                    <li><a href="https://wa.me/59179873064" target="_blank" rel="noopener" class="whatsapp-button"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-whatsapp"/></svg><span>Herman Hurtado Zabala</span></a></li>
+                    <li><a href="https://wa.me/59169011975" target="_blank" rel="noopener" class="whatsapp-button"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><use href="#i-whatsapp"/></svg><span>Ing. Erick Kay Añez</span></a></li>
+                </ul>
+                <div class="social-buttons">
+                    <a href="https://www.instagram.com/ensilados.scz" target="_blank" rel="noopener" class="social-button" aria-label="Instagram de Ensilados Santa Cruz"><svg aria-hidden="true" viewBox="0 0 24 24" width="34" height="34"><use href="#i-instagram"/></svg></a>
+                    <a href="https://www.facebook.com/profile.php?id=100094355722930" target="_blank" rel="noopener" class="social-button" aria-label="Facebook de Ensilados Santa Cruz"><svg aria-hidden="true" viewBox="0 0 24 24" width="34" height="34"><use href="#i-facebook"/></svg></a>
+                    <a href="https://ensilados.cerice360.com/" class="social-button" aria-label="Sitio web de Ensilados Santa Cruz"><svg aria-hidden="true" viewBox="0 0 24 24" width="34" height="34"><use href="#i-web"/></svg></a>
+                </div>
             </div>
-            <a href="#slide1" class="arrow-button">⬆</a>
-        </div>
-    </section>
-    
-    <script>
-        document.querySelectorAll('.arrow-button').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
+            <a href="#slide1" class="arrow-button" aria-label="Volver al inicio">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="32" height="32"><use href="#i-arriba"/></svg>
+            </a>
+        </section>
+    </main>
 
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.gallery-images img');
-        const totalSlides = slides.length;
-
-        document.getElementById('next-button').addEventListener('click', function() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateGallery();
-        });
-
-        document.getElementById('prev-button').addEventListener('click', function() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateGallery();
-        });
-
-        function updateGallery() {
-            const offset = -currentSlide * 100;
-            document.getElementById('gallery-images').style.transform = `translateX(${offset}%)`;
-        }
-    </script>
+    <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.98L2 22l5.17-1.5A9.9 9.9 0 1 0 12.04 2Zm0 18.1a8.2 8.2 0 0 1-4.2-1.16l-.3-.18-3.07.9.9-3-.2-.31a8.2 8.2 0 1 1 6.87 3.75Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.16.25-.63.8-.78.97-.14.16-.29.18-.53.06a6.7 6.7 0 0 1-3.34-2.92c-.25-.43.25-.4.72-1.34.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3 2.75 2.75 0 0 0-.86 2.04 4.77 4.77 0 0 0 1 2.53 10.9 10.9 0 0 0 4.18 3.7c1.56.67 2.17.73 2.95.61.47-.07 1.46-.6 1.66-1.17.2-.58.2-1.07.14-1.17-.06-.1-.22-.16-.47-.28Z"/></symbol>
+        <symbol id="i-descarga" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></symbol>
+        <symbol id="i-agenda" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm10-3v6m3-3h-6"/></symbol>
+        <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+        <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.87.25-1.46 1.5-1.46h1.6V4.45A21 21 0 0 0 14.3 4.3c-2.3 0-3.8 1.4-3.8 3.96V10.5H8v3h2.5V21h3Z"/></symbol>
+        <symbol id="i-web" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+        <symbol id="i-abajo" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
+        <symbol id="i-arriba" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M6 15l6-6 6 6"/></symbol>
+    </svg>
 </body>
 </html>

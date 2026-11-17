@@ -1,260 +1,149 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* vCard Ensilados Santa Cruz */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --verde: #0b6b17;        /* botones con texto blanco: 6,7:1 */
+    --verde-hover: #075211;
+    --verde-claro: #5bec13;  /* foco y acentos sobre fondo oscuro */
+    --blanco: #fff;
 }
 
-body, html {
-    height: 100%;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    background: #0f170b;
+    color: var(--blanco);
+    line-height: 1.5;
 }
 
-/* === BOTÓN REGISTRAR NÚMERO (unificado y con diseño .pdf-button) === */
-#registrarNumeroBtn {
-    background-color: #00b818;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    display: inline-block;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-}
-#registrarNumeroBtn:hover {
-    background-color: #006600;
-    color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
+img, svg { display: block; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--verde-claro); outline-offset: 3px; border-radius: 8px; }
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
 
-/* === BOTONES PDF, WHATSAPP Y OTROS GENERALES === */
-.pdf-button, .whatsapp-button, .social-button {
-    background-color: #00b818;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    display: inline-block;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-}
+.saltar { position: absolute; left: 12px; top: -80px; z-index: 10; background: var(--blanco); color: #0f170b; padding: 10px 16px; border-radius: 8px; font-weight: 700; }
+.saltar:focus { top: 12px; }
 
-.pdf-button:hover, .whatsapp-button:hover, .social-button:hover {
-    background-color: #006600;
-    color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Corrección específica para botón WhatsApp */
-.whatsapp-button {
-    background-color: #00b818;
-    color: white;
-}
-
-.pdf-buttons, .whatsapp-buttons, .contact-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    margin: 20px 0;
-}
-
-/* SOCIAL BUTTONS (Facebook e Instagram conservan su estilo original redondo) */
-.social-buttons {
-    display: flex;
-    gap: 15px;
-    margin: 20px 0;
-}
-
-.social-button {
-    width: 75px;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border: 2px solid #00b818;
-    border-radius: 50%;
-    color: #00b818;
-    text-decoration: none;
-    font-size: 40px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.social-button:hover {
-    background-color: #00b818;
-    color: white;
-}
-
-/* CONTENEDOR PRINCIPAL DE BOTONES */
-.button-container {
-    margin: 20px 0;
-}
-
-/* VIDEO BACKGROUND */
+/* FONDO: foto fija (siempre) + video solo en pantallas grandes, ver js/vcard.js */
 #video-background {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    inset: 0;
     z-index: -1;
     overflow: hidden;
-    background-color: black;
+    background: #0f170b url("img/foto-3-1280.webp") center / cover no-repeat;
 }
-
-.video-wrapper {
+#video-background::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8, 14, 5, .62), rgba(8, 14, 5, .72));
+}
+.video-wrapper { position: absolute; inset: 0; overflow: hidden; }
+.video-wrapper iframe {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    width: max(125vw, 222.22vh);
+    height: max(125vh, 70.32vw);
     transform: translate(-50%, -50%);
-}
-
-#video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 222.22vh;
-    height: 125vh;
-    transform: translate(-50%, -50%);
+    border: 0;
     pointer-events: none;
 }
 
-/* SECCIONES SLIDE */
+/* SECCIONES */
 .slide {
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
-    color: white;
+    padding: 48px 20px 88px;
     position: relative;
 }
+.content { width: 100%; max-width: 640px; }
+h1, h2 { font-size: clamp(2rem, 7vw, 3rem); line-height: 1.15; margin-bottom: 16px; text-shadow: 0 2px 12px rgba(0, 0, 0, .5); }
+.content > p { font-size: 1.125rem; max-width: 34em; margin: 0 auto 8px; text-shadow: 0 1px 8px rgba(0, 0, 0, .6); }
 
-.content {
-    max-width: 80%;
-    font-size: 1.5rem;
-}
+.svg-container { display: flex; justify-content: center; padding: 8px 0 16px; }
+.vcard-png { width: clamp(150px, 40vw, 200px); height: auto; border-radius: 16px; }
 
-h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: white;
-}
-
-p {
-    font-size: 1.2rem;
-    color: white;
-}
-
-/* FLECHA */
-.arrow-button {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    color: white;
-    text-decoration: none;
-    transition: transform 0.2s;
-}
-
-.arrow-button:hover {
-    transform: translateX(-50%) scale(1.2);
-}
-
-/* VCARD IMÁGENES Y SVG */
-.vcard-png {
-    width: 250px;
-    height: auto;
-}
-
-.svg-container {
-    display: flex;
-    justify-content: center;
+/* BOTONES */
+.download-button, .pdf-button, .whatsapp-button {
+    display: inline-flex;
     align-items: center;
-    padding: 20px;
-    z-index: 1;
-}
-
-.vcard-svg {
-    width: 50%;
-    max-width: 300px;
-    height: auto;
-}
-
-/* ICONOS SOCIALES */
-.social-icons {
-    display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.social-icon {
-    font-size: 5rem;
-    color: white;
-    transition: color 0.3s;
-}
-
-.social-icon:hover {
-    color: #00e231;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .vcard-svg {
-        width: 70%;
-    }
-}
-
-/* BOTÓN DE DESCARGA */
-.download-button {
-    background-color: #00b818;
-    color: white;
-    border: none;
-    padding: 15px 25px;
-    border-radius: 50px;
-    font-size: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    display: inline-block;
+    gap: 10px;
     width: 100%;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.2);
+    max-width: 340px;
+    min-height: 52px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background-color: var(--verde);
+    color: var(--blanco);
+    font-weight: 700;
+    font-size: 1.05rem;
     text-decoration: none;
-    margin: 20px auto;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .35);
+    transition: background-color .2s, transform .2s;
 }
+.download-button:hover, .pdf-button:hover, .whatsapp-button:hover { background-color: var(--verde-hover); transform: translateY(-1px); }
+.download-button { font-size: 1.35rem; min-height: 60px; margin: 20px auto 8px; }
+.peso { font-weight: 500; opacity: .9; }
 
-.download-button:hover {
-    background-color: #006600;
-    color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+.pdf-buttons, .contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin: 24px 0;
+    list-style: none;
 }
+.contact-buttons li { width: 100%; display: flex; justify-content: center; }
+.whatsapp-button { justify-content: flex-start; text-align: left; border-radius: 18px; }
+.whatsapp-button span { display: flex; flex-direction: column; }
+.whatsapp-button small { font-weight: 500; font-size: .875rem; opacity: .9; }
+.whatsapp-button svg { flex: none; }
+
+.acciones-rapidas { display: flex; justify-content: center; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
+.accion-rapida {
+    display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 18px;
+    border: 2px solid rgba(255, 255, 255, .7); border-radius: 999px; text-decoration: none; font-weight: 700;
+    background: rgba(0, 0, 0, .25);
+}
+.accion-rapida:hover { border-color: var(--verde-claro); }
+
+.social-buttons { display: flex; justify-content: center; gap: 16px; margin: 20px 0; }
+.social-button {
+    width: 64px; height: 64px; display: grid; place-items: center; border-radius: 50%;
+    background: var(--blanco); color: var(--verde); border: 2px solid var(--verde);
+    transition: background-color .2s, color .2s;
+}
+.social-button:hover { background: var(--verde); color: var(--blanco); }
+
+/* FLECHAS ENTRE SECCIONES */
+.arrow-button {
+    position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+    display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%;
+    color: var(--blanco); background: rgba(0, 0, 0, .3); transition: transform .2s;
+}
+.arrow-button:hover { transform: translateX(-50%) scale(1.1); }
+
+/* GALERÍA */
+.gallery {
+    position: relative; overflow: hidden; width: 100%; max-width: 800px; margin: 20px auto 0;
+    border-radius: 14px; box-shadow: 0 8px 24px rgba(0, 0, 0, .4); touch-action: pan-y;
+}
+.gallery-images { display: flex; transition: transform .45s ease; }
+.gallery-images img { flex: 0 0 100%; width: 100%; aspect-ratio: 3 / 2; height: auto; object-fit: cover; }
+.gallery-button {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%;
+    background: rgba(255, 255, 255, .9); color: #0f170b; cursor: pointer;
+}
+.gallery-button.prev { left: 10px; }
+.gallery-button.next { right: 10px; }
+.gallery-contador { margin-top: 10px; font-size: .95rem; text-shadow: 0 1px 6px rgba(0, 0, 0, .6); }
